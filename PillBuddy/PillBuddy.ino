@@ -108,7 +108,15 @@ void loop()
 
 //function that turns the servo to next pill slot
 void spinServo(){
-  return; //NEED TO COMPLETE
+  int currentPos = myservo.read(); //gets current servo position
+  if(currentPos <= 154){
+    myservo.write(currentPos + 26);
+  }
+  else
+  {
+    myservo.write(0);
+  }
+  
 }
 
 //Functions for alarm song
